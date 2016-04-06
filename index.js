@@ -17,7 +17,7 @@ var UserAppData = function(config) {
 	}
 	this.appName = config.appname || this.appPackage.name;
 	
-	this.dataFolder = process.env.APPDATA || (process.platform === 'darwin' ? path.join(process.env.HOME, 'Library/Preferences') : '/var/local') 
+	this.dataFolder = process.env.APPDATA || (process.platform === 'darwin' ? path.join(process.env.HOME, 'Library/Preferences') : (process.env.HOME || process.env.HOMEPATH || process.env.USERPROFILE)) 
 	this.dataFolder = path.join(this.dataFolder, this.appName); 
 	
 	this.setConfigFilename(config.filename || "config.json");
