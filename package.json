@@ -1,0 +1,40 @@
+{
+  "name": "user-appdata",
+  "version": "0.1.0",
+  "description": "Load and save user application data with ease.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "fs-extra": "^0.26.7"
+  },
+  "devDependencies": {
+    "mocha": "^2.4.5",
+    "mocha-jshint": "^2.3.1",
+    "should": "^8.3.0"
+  },
+  "scripts": {
+    "test": "node node_modules/mocha/bin/_mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/s-a/user-appdata.git"
+  },
+  "keywords": [
+    "setup",
+    "config",
+    "configuration",
+    "settings",
+    "app-data",
+    "app_data",
+    "appdata",
+    "configs"
+  ],
+  "author": "Stephan Ahlf <stephan.ahlf@gmail.com> (https://github.com/s-a)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/s-a/user-appdata/issues"
+  },
+  "homepage": "https://github.com/s-a/user-appdata#readme"
+}
