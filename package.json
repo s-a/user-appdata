@@ -6,9 +6,7 @@
   "directories": {
     "test": "test"
   },
-  "dependencies": {
-    "fs-extra": "^0.26.7"
-  },
+  "dependencies": {},
   "devDependencies": {
     "mocha": "^2.4.5",
     "mocha-jshint": "^2.3.1",

@@ -2,7 +2,6 @@
 
 
 var fs = require("fs");
-var fse = require('fs-extra')
 var path = require("path");
 
 var UserAppData = function(config) {
@@ -26,7 +25,6 @@ var UserAppData = function(config) {
 	if (fs.existsSync(this.filename)){
 		this.load();
 	} else {
-		fse.ensureDir(this.dataFolder);
 		this.save();
 	}
 	
@@ -39,6 +37,9 @@ UserAppData.prototype.setConfigFilename = function (filename) {
 };
 
 UserAppData.prototype.save = function () {
+	if (!fs.existsSync(this.dataFolder)){
+		fs.mkdirSync(this.dataFolder);
+	}
 	fs.writeFileSync(this.filename, JSON.stringify(this.settings, null, 4));
 };
 
@@ -47,7 +48,7 @@ UserAppData.prototype.load = function () {
 };
 
 UserAppData.prototype.uninstall = function () {
-	fse.removeSync(this.filename);
+	fs.unlink(this.filename);
 };
 
 module.exports = UserAppData;
