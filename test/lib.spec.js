@@ -21,3 +21,4 @@ describe("UserAppData.init without filename", function(){
 		fs.existsSync(config.filename).should.be.true;
 	});
 });
+ 
