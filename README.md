@@ -11,3 +11,38 @@
 [![Massachusetts Institute of Technology (MIT)](https://s-a.github.io/license/img/mit.svg)](/LICENSE.md#mit)
 [![Donate](http://s-a.github.io/donate/donate.svg)](http://s-a.github.io/donate/)
 
+
+Load and save application data platform independent without additional configuration based on the current users system ```APP_DATA``` folder.
+
+
+## Contructor parms
+ - appname (not optional) - A unique app name. Best one is the ```name``` property from your ```package.json```.
+ - filename (optional) - Default ```config.json```.
+ - defaultSettings (optional).
+
+
+
+## Methods
+ - ```load()```
+ - ```save()```
+ - ```uninstall()```
+ - ```setConfigFilename(filename /* string */)```
+
+### Example
+```javascript
+var Config = require("app-userdata");
+var config = new Config({appname : "myApp", defaultSettings : {"foo" : "bar"}});
+console.log(config);
+```
+
+### Yields on Microsoft Windows:
+```javascript
+{
+	settings: {
+		foo: 'bar'
+	},
+	appName: 'myApp',
+	dataFolder: 'C:\\Users\\Stephan\\AppData\\Roaming\\myApp',
+	filename: 'C:\\Users\\Stephan\\AppData\\Roaming\\myApp\\config.json' 
+}
+```
