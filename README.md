@@ -24,7 +24,7 @@ Load and save application data platform independent without additional configura
 
 ## Methods
  - ```load()```
- - ```save()```
+ - ```save()``` 
  - ```uninstall()```
  - ```setConfigFilename(filename /* string */)```
 
