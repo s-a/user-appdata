@@ -30,7 +30,7 @@ Load and save application data platform independent without additional configura
 
 ### Example
 ```javascript
-var Config = require("app-userdata");
+var Config = require("user-appdata");
 var config = new Config({appname : "myApp", defaultSettings : {"foo" : "bar"}});
 console.log(config);
 ```
