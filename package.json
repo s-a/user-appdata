@@ -1,6 +1,6 @@
 {
   "name": "user-appdata",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Load and save user application data with ease.",
   "main": "lib/index.js",
   "directories": {
@@ -16,10 +16,10 @@
   "scripts": {
     "test": "node node_modules/mocha/bin/_mocha",
     "bump": "npm version patch && git push && git push --tags && npm publish",
-    "coverage-lib-cov" : "node node_modules/jscoverage/bin/jscoverage lib lib-cov",
-    "coverage-html" : "node node_modules/mocha/bin/_mocha -R html-cov > coverage.html",
-    "coverage-cleanup" : "rm lib-cov/*.*",
-    "coverage" : "rm coverage.html && npm run coverage-lib-cov && npm run coverage-html && npm run coverage-cleanup"
+    "coverage-lib-cov": "node node_modules/jscoverage/bin/jscoverage lib lib-cov",
+    "coverage-html": "node node_modules/mocha/bin/_mocha -R html-cov > coverage.html",
+    "coverage-cleanup": "rm lib-cov/*.*",
+    "coverage": "rm coverage.html && npm run coverage-lib-cov && npm run coverage-html && npm run coverage-cleanup"
   },
   "repository": {
     "type": "git",
